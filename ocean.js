@@ -54,7 +54,7 @@ let pollutionFacts = [
     "About 10% of America’s beaches fail to meet the federal benchmark for what constitutes safe swimming water.",
     "Every year, more people die from unsafe water than from all forms of violence, including war.",
 ]
-
+//Function that will display one of the pollution facts on the side
 function displayRandomFact() {
     // Select the target element by its class
     let factContainer = document.querySelector('.pollution-facts');
