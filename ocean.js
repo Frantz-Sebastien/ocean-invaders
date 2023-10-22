@@ -45,6 +45,34 @@ let bulletVelocityY = -10; //bullet moving speed
 let score = 0;
 let gameOver = false;
 
+//Array with Water Pollution Facts and Solution
+let pollutionFacts = [
+    "Over 1 million seabirds and 100,000 sea mammals are killed by pollution every year.",
+    "The Mississippi River carries an estimated 1.5 million metric tons of nitrogen pollution into the Gulf of Mexico each year, creating a “dead zone” in the Gulf each summer about the size of New Jersey.",
+    "Approximately 40% of the lakes in America are too polluted for fishing, aquatic life, or swimming.",
+    "Each year 1.2 trillion gallons of untreated sewage, stormwater, and industrial waste are dumped into US water.",
+    "About 10% of America’s beaches fail to meet the federal benchmark for what constitutes safe swimming water.",
+    "Every year, more people die from unsafe water than from all forms of violence, including war.",
+]
+
+function displayRandomFact() {
+    // Select the target element by its class
+    let factContainer = document.querySelector('.pollution-facts');
+    
+    // Get a random index based on the array length
+    let randomIndex = Math.floor(Math.random() * pollutionFacts.length);
+    
+    // Get the fact at the random index
+    let fact = pollutionFacts[randomIndex];
+    
+    // Set the text of the target element to the selected fact
+    factContainer.innerText = fact;
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    displayRandomFact();
+});
+
 window.onload = function() {
     board = document.getElementById("board");
     board.width = boardWidth;
