@@ -1,12 +1,13 @@
 //board
-let tileSize = 32;
+let tileSize = 36;
 let rows = 16;
 let columns = 16;
 
 let board;
-let boardWidth = tileSize * columns; // 32 * 16
-let boardHeight = tileSize * rows; // 32 * 16
+let boardWidth = tileSize * columns; // 36 * 16
+let boardHeight = tileSize * rows; // 36 * 16
 let context;
+
 
 //boat
 let boatWidth = tileSize*2;
@@ -50,10 +51,6 @@ window.onload = function() {
     board.height = boardHeight;
     context = board.getContext("2d"); //used for drawing on the board
 
-    //draw initial boat
-    // context.fillStyle="green";
-    // context.fillRect(boat.x, boat.y, boat.width, boat.height);
-
     //load images
     boatImg = new Image();
     boatImg.src = "./boat.png";
@@ -74,6 +71,10 @@ function update() {
     requestAnimationFrame(update);
 
     if (gameOver) {
+        context.clearRect(0, 0, board.width, board.height);
+        context.fillStyle = "white";
+        context.font = "32px Arial";
+        context.fillText("Game Over", boardWidth / 2 - 80, boardHeight / 2);
         return;
     }
 
