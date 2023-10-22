@@ -53,6 +53,17 @@ let pollutionFacts = [
     "Each year 1.2 trillion gallons of untreated sewage, stormwater, and industrial waste are dumped into US water.",
     "About 10% of America’s beaches fail to meet the federal benchmark for what constitutes safe swimming water.",
     "Every year, more people die from unsafe water than from all forms of violence, including war.",
+    "About two billion people worldwide don’t have access to safe drinking water today",
+    "Water quality is also affected by climate change, as higher water temperatures and more frequent floods and droughts are projected to increase many forms of water pollution",
+    "Climate change has made extreme weather events such as floods and droughts more likely and more severe",
+    "Water-related disasters have dominated the list of disasters over the past 50 years",
+    "Wetlands such as mangroves, seagrasses, marshes and swamps are highly effective carbon sinks that absorb and store CO2, helping to reduce greenhouse gas emissions",
+    "Healthy aquatic ecosystems and improved water management can lower greenhouse gas emissions and provide protection against climate hazards",
+    "Water supply and sanitation systems that can withstand climate change could save the lives of more than 360,000 infants every year",
+    "Climate-smart agriculture using drip irrigation and other means of using water more efficiently can help reduce demand on freshwater supplies",
+    "At the local and national level, we need strong policies and regulations to protect our ocean and environment. And we need global solidarity.",
+    "Picking up litter and throw it away in a garbage can help prevent water pollution"
+
 ]
 //Function that will display one of the pollution facts on the side
 function displayRandomFact() {
@@ -71,6 +82,8 @@ function displayRandomFact() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     displayRandomFact();
+
+    setInterval(displayRandomFact, 5000)
 });
 
 window.onload = function() {
