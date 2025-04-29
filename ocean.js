@@ -40,7 +40,7 @@ let deadfishVelocityX = 1; //deadfish moving speed
 
 //bullets
 let bulletArray = [];
-let bulletVelocityY = -10; //bullet moving speed
+let bulletVelocityY = -20; //bullet moving speed
 
 let score = 0;
 let gameOver = false;
